@@ -4,14 +4,13 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Entry test = new();
-        // test.Prompt = "Who was the most interesting person I interacted with today?";
-        // test.Response = "I dotn know.";
 
         Journal myJournal = new Journal();
         PromptGenerator pg = new();
         string filename = "";
         int choice = 0;
+
+
         while (choice != 5)
         {
             Menu.PrintMenu(myJournal.Status());
@@ -83,8 +82,6 @@ class Program
                     break;
 
             }
-
-
         }
     }
 }

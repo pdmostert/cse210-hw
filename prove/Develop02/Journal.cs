@@ -6,7 +6,6 @@ public class Journal
 
     public Journal()
     {
-
     }
     public Journal(List<Entry> entries)
     {

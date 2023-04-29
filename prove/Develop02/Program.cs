@@ -23,7 +23,7 @@ class Program
                     System.Console.WriteLine(prompt);
                     Console.Write("> ");
                     string response = Console.ReadLine();
-                    Entry myEntry = new Entry() { Prompt = prompt, Response = response };
+                    Entry myEntry = new Entry(prompt, response);
                     myJournal.AddJournalEntry(myEntry);
                     break;
                 case 2: //Display

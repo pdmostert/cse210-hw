@@ -19,7 +19,7 @@ public static class DataAccess
         foreach (var line in lines)
         {
             string[] parts = line.Split("~|~");
-            entries.Add(new Entry() { Date = parts[0], Prompt = parts[1], Response = parts[2] });
+            entries.Add(new Entry(parts[0], parts[1], parts[2] ));
         }
         return entries;
     }

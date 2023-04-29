@@ -19,15 +19,15 @@ public class Entry
 
     public string Date
     {
-        get { return _date; }
+        get => _date;
     }
     public string Prompt
     {
-        get { return _prompt; }
+        get => _prompt;
     }
     public string Response
     {
-        get { return _response; }
+        get => _response;
     }
 
 

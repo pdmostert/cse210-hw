@@ -1,35 +1,73 @@
+/* The Journal class represents a journal object that can add entries, track whether it has been saved,
+and return a read-only list of entries. */
 public class Journal
 {
 
-    public bool IsSaved { get; private set; } = false;
-    public List<Entry> Entries { get; private set; } = new();
+    private bool _isSaved  = false;
+    private List<Entry> _entries  = new();
 
     public Journal()
     {
     }
     public Journal(List<Entry> entries)
     {
-        Entries = entries;
+        _entries = entries;
     }
+
+/// <summary>
+/// The function adds a new entry to a journal and sets a flag indicating that the journal has not been
+/// saved.
+/// </summary>
+/// <param name="Entry">Entry is a class or data type that represents a journal entry. It could contain
+/// properties such as the date, title, content, author, etc. The AddJournalEntry method takes an
+/// instance of the Entry class as a parameter and adds it to a list of entries (_entries). It also sets
+/// a</param>
     public void AddJournalEntry(Entry entry)
     {
-        Entries.Add(entry);
-        JournalSaved(false);
+        _entries.Add(entry);
+        _isSaved = false;
+    }
 
-    }
-    public void JournalSaved(bool isSaved)
+
+    public bool IsSaved
     {
-        IsSaved = isSaved;
+        get { return _isSaved; }
     }
+    
+
+/* This is a property in the `Journal` class that returns an `IReadOnlyList` of `Entry` objects. The
+`get` accessor returns the private field `_entries`, which is a `List` of `Entry` objects. By
+returning an `IReadOnlyList`, the property ensures that the list of entries cannot be modified
+outside of the `Journal` class. This helps to maintain encapsulation and prevent unintended changes
+to the list of entries. */
+    public  IReadOnlyList<Entry> Entries
+    {
+        get { return _entries; }
+    }
+
+/// <summary>
+/// The function sets a boolean variable to true indicating that a journal has been saved.
+/// </summary>
+    public void JournalSaved()
+    {
+        _isSaved = true;
+    }
+
+/// <summary>
+/// The function returns a string indicating whether the object has been saved or not.
+/// </summary>
+/// <returns>
+/// The method `Status()` returns a string indicating whether the object has been saved or not. If
+/// `_isSaved` is true, it returns the string "(Saved)", otherwise it returns the string "(Not Saved)".
+/// </returns>
     public string Status()
     {
-        if (IsSaved)
+        if (_isSaved)
         {
             return "(Saved)";
         }
         else{
             return "(Not Saved)";
         }
-
     }
 }

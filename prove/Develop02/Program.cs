@@ -49,7 +49,7 @@ class Program
                             System.Console.Write("What is the filename to load? ");
                             filename = Console.ReadLine();
                             myJournal = new(DataAccess.ReadJournalFile(filename));
-                            myJournal.JournalSaved(true);
+                            myJournal.JournalSaved();
                         }
                     }
                     else
@@ -57,7 +57,7 @@ class Program
                         System.Console.Write("What is the filename to load? ");
                         filename = Console.ReadLine();
                         myJournal = new(DataAccess.ReadJournalFile(filename));
-                        myJournal.JournalSaved(true);
+                        myJournal.JournalSaved();
                     }
                     break;
                 case 4: // Save

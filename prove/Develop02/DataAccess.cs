@@ -37,7 +37,7 @@ public static class DataAccess
         {
             outputfile.WriteLine($"{item.Date}~|~{item.Prompt}~|~{item.Response}");
         }
-        journal.JournalSaved(true);
+        journal.JournalSaved();
     }
 
 

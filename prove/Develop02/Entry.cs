@@ -30,7 +30,12 @@ public class Entry
         get => _response;
     }
 
-
+/// <summary>
+/// The Display function returns a formatted string containing the date, prompt, and response.
+/// </summary>
+/// <returns>
+/// A string that displays the date, prompt, and response in a formatted way.
+/// </returns>
     public string Display()
     {
         return $"Date: {_date} - Prompt:  {_prompt} \n{_response}";

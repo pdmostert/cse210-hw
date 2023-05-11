@@ -2,10 +2,8 @@
 and return a read-only list of entries. */
 public class Journal
 {
-
     private bool _isSaved  = false;
     private List<Entry> _entries  = new();
-
     public Journal()
     {
     }
@@ -27,19 +25,10 @@ public class Journal
         _entries.Add(entry);
         _isSaved = false;
     }
-
-
     public bool IsSaved
     {
         get { return _isSaved; }
     }
-    
-
-/* This is a property in the `Journal` class that returns an `IReadOnlyList` of `Entry` objects. The
-`get` accessor returns the private field `_entries`, which is a `List` of `Entry` objects. By
-returning an `IReadOnlyList`, the property ensures that the list of entries cannot be modified
-outside of the `Journal` class. This helps to maintain encapsulation and prevent unintended changes
-to the list of entries. */
     public  IReadOnlyList<Entry> Entries
     {
         get { return _entries; }
@@ -69,5 +58,8 @@ to the list of entries. */
         else{
             return "(Not Saved)";
         }
+    }
+    public void Load(List<Entry> entries){
+        _entries = entries;
     }
 }

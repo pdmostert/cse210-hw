@@ -25,6 +25,7 @@ public class Menu
     /// </returns>
     public static int GetSelectedMenuOption(int min, int max)
     {
+
         //Used tryparse incase someone enters a value other then a int
         int choice = 0;
         string response = Console.ReadLine();
@@ -73,7 +74,6 @@ public class Menu
         string response = Console.ReadLine();
         Entry myEntry = new Entry(prompt, response);
         myJournal.AddJournalEntry(myEntry);
-
     }
 /// <summary>
 /// The function displays all entries in a journal.
@@ -124,7 +124,9 @@ public class Menu
         {
             System.Console.Write("What is the filename to load? ");
             filename = Console.ReadLine();
-            myJournal = new(DataAccess.ReadJournalFile(filename));
+            //myJournal = new(DataAccess.ReadJournalFile(filename));
+            myJournal = new();
+            myJournal.Load(DataAccess.ReadJournalFile(filename));
             myJournal.JournalSaved();
         }
         return myJournal;

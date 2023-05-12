@@ -58,11 +58,11 @@ public class Scripture
             _wordIndex.RemoveAt(index);
         }
 
-        // Just check if our loop of 3 was the last word to be hidden 
-        if (_wordIndex.Count == 0)
-        {
-            _isCompletelyHiden = true;
-        }
+        // // Just check if our loop of 3 was the last word to be hidden 
+        // if (_wordIndex.Count == 0)
+        // {
+        //     _isCompletelyHiden = true;
+        // }
     }
 
     public bool IsCompletlyHiden()

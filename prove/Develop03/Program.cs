@@ -15,15 +15,22 @@ class Program
 
 
         //start menu and loop exit when complete or quit
+        string response = "";
+        // System.Console.WriteLine(scripture.GetRenderedText());
+        // Menu.PrintMenu();
+        // response = Menu.GetResponse();
 
-        System.Console.WriteLine(scripture.GetRenderedText());
-
-        while (scripture.IsCompletlyHiden() == false)
+        while (response != "quit")
         {
-            scripture.HideWords();
+            if (scripture.IsCompletlyHiden())
+            {
+                break;
+            }
             System.Console.Clear();
             Console.WriteLine(scripture.GetRenderedText());
-
+            Menu.PrintMenu();
+            response = Menu.GetResponse();
+            scripture.HideWords();
         }
 
 

@@ -4,32 +4,32 @@
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
-                <mxCell id="45" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
-                    <mxGeometry x="-70" y="20" width="1100" height="670" as="geometry"/>
+                <mxCell id="45" value="" style="rounded=0;fillColor=none;fontColor=default;" vertex="1" parent="1">
+                    <mxGeometry x="-70" y="20" width="1100" height="790" as="geometry"/>
                 </mxCell>
                 <mxCell id="2" value="Scripture" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;" parent="1" vertex="1">
-                    <mxGeometry x="350" y="130" width="200" height="240" as="geometry"/>
+                    <mxGeometry x="350" y="130" width="200" height="258" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="+ _words: List&lt;words&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="26" width="200" height="26" as="geometry"/>
+                <mxCell id="3" value="+ _words: List&lt;words&gt;&#10;+ _wordIndex: List&lt;int&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
+                    <mxGeometry y="26" width="200" height="44" as="geometry"/>
                 </mxCell>
                 <mxCell id="31" value="+ _reference: Reference" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="52" width="200" height="26" as="geometry"/>
+                    <mxGeometry y="70" width="200" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="13" value="+ _isCompletlyHidden: bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="78" width="200" height="26" as="geometry"/>
+                    <mxGeometry y="96" width="200" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" parent="2" vertex="1">
-                    <mxGeometry y="104" width="200" height="8" as="geometry"/>
+                    <mxGeometry y="122" width="200" height="8" as="geometry"/>
                 </mxCell>
                 <mxCell id="27" value="+ GetRenderedText(type): string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="112" width="200" height="26" as="geometry"/>
+                    <mxGeometry y="130" width="200" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="28" value="+ HideWords(): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="138" width="200" height="26" as="geometry"/>
+                    <mxGeometry y="156" width="200" height="26" as="geometry"/>
                 </mxCell>
                 <mxCell id="30" value="+ CreateWordList(string): void&#10;+ Scripture(string, reference)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="2" vertex="1">
-                    <mxGeometry y="164" width="200" height="76" as="geometry"/>
+                    <mxGeometry y="182" width="200" height="76" as="geometry"/>
                 </mxCell>
                 <mxCell id="42" style="edgeStyle=none;html=1;" parent="1" source="10" target="2" edge="1">
                     <mxGeometry relative="1" as="geometry"/>
@@ -55,8 +55,8 @@
                 <mxCell id="38" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Reference&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ _book: string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ _chapter: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ _start: int&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ _end: int&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Display(): string&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Reference (string,int,int)&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Reference (string,int,int, int)&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;" parent="1" vertex="1">
                     <mxGeometry x="710" y="310" width="180" height="148" as="geometry"/>
                 </mxCell>
-                <mxCell id="46" value="The&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-                    <mxGeometry x="10" y="480" width="890" height="180" as="geometry"/>
+                <mxCell id="48" value="The Program class will call the DataAccess class to read a&#10;text file with scripture references and scripture string. Once the user has&#10;selected a specific reference to memorise, it will create a new instance of&#10;scripture class. It will loop until the all the words are hidden or if the user&#10;enters “quit”.&#10;&#10;&#10;The scripture class has a constructor that will accept a&#10;string of text and associated reference. The constructor will call the CreateWorldList&#10;to convert the string to a list of words and store it in the attribute _words.&#10;The scripture class also has an _isCompletlyHiden attribute to track if all the&#10;words have been hidden. The HideWords method will hide 3 random words without&#10;hiding duplicates until all are hidden. The GetRenderText will return formatted&#10;string with the reference and scripture text with words. &#10;&#10;&#10;The Word class has 2 attributes 1 constructor and 3 methods.&#10;Attributes are _word and _isHidden, a constructor that accepts a string for the&#10;word. It also has 3 methods, Hideword, ShowWord and GetRenderedText which will&#10;return a word or a hidden word.&#10;&#10;&#10;The Reference Class has 4 attributes and 1 method with 2 constructers,&#10;first for Book, chapter, start verse and second for Book, chapter start verse, end&#10;verse. Display method will return a string with the formatted reference." style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;labelPosition=center;verticalLabelPosition=middle;fontColor=default;labelBackgroundColor=none;labelBorderColor=none;spacingLeft=0;spacingBottom=0;spacingTop=0;spacingRight=0;spacing=13;" vertex="1" parent="1">
+                    <mxGeometry x="-20" y="400" width="530" height="390" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

@@ -5,13 +5,13 @@ public class Scripture
 {
     private List<Word> _words;
     private Reference _reference;
-    private bool _isCompletelyHiden;
+    private bool _isCompletelyHidden;
     private List<int> _wordIndex;
 
     public Scripture(Reference reference, string sentance)
     {
         _reference = reference;
-        _isCompletelyHiden = false;
+        _isCompletelyHidden = false;
         CreateWordList(sentance);
     }
 
@@ -49,7 +49,7 @@ public class Scripture
         {
             if (_wordIndex.Count == 0)
             {
-                _isCompletelyHiden = true;
+                _isCompletelyHidden = true;
                 return;
             }
             int index = GetRandomIndex();
@@ -67,7 +67,7 @@ public class Scripture
 
     public bool IsCompletlyHiden()
     {
-        return _isCompletelyHiden;
+        return _isCompletelyHidden;
     }
 
     private int GetRandomIndex()

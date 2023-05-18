@@ -2,28 +2,28 @@ public class Word
 {
 
     private string _word;
-    private bool _isHiden;
+    private bool _isHidden;
 
     public Word(string word)
     {
         _word = word;
-        _isHiden = false;
+        _isHidden = false;
     }
 
 
     public void Hide()
     {
-        _isHiden = true;
+        _isHidden = true;
     }
 
     public void Show()
     {
-        _isHiden = false;
+        _isHidden = false;
     }
 
     public string GetRenderedText()
     {
-        if (_isHiden)
+        if (_isHidden)
         {
             string placeHolder = "";
             // hide letters with _

@@ -33,7 +33,5 @@ class Program
             scripture.HideWords();
         }
 
-
-
     }
 }

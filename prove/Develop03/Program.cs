@@ -4,7 +4,7 @@ using System;
 class Program
 {
 
-///  To exceed requirements I have ensured that the random hiding of words is never duplicated.
+/// To exceed requirements, I have ensured that the random hiding of words is never duplicated.
 /// I also created a DataAccess class to load multiple scriptures from a text file.
 /// A menu to select the scripture to memorize.
 

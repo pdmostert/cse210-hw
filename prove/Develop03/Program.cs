@@ -3,35 +3,38 @@ using System;
 
 class Program
 {
+
+///  To exceed requirements I have ensured that the random hiding of words is never duplicated.
+/// I also created a DataAccess class to load multiple scriptures from a text file.
+/// A menu to select the scripture to memorize.
+
     static void Main(string[] args)
     {
         //Clear before we start
         System.Console.Clear();
 
-        // Load dummy content
-        Reference reference = new("Proverbs", 3, 5, 6);
-        string sentance = "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths.";
-        Scripture scripture = new(reference, sentance);
+        List<Scripture> scriptures = new();
+        scriptures = DataAccess.LoadFile(); //Load scriptures from file
 
+        //Print scripture select menu and load selected scripture
+        int count = Menu.PrintScriptureChoiceMenu(scriptures);
+        int selectedScriptureIndex =  Menu.GetSelectedMenuOption(1,count) -1;
+        Scripture scripture = scriptures[selectedScriptureIndex];
 
-        //start menu and loop exit when complete or quit
+        //start memorize menu and loop exit when complete or quit
         string response = "";
-        // System.Console.WriteLine(scripture.GetRenderedText());
-        // Menu.PrintMenu();
-        // response = Menu.GetResponse();
 
         while (response != "quit")
         {
+            System.Console.Clear();
+            Console.WriteLine(scripture.GetRenderedText());
+            Menu.PrintMenu();
             if (scripture.IsCompletlyHiden())
             {
                 break;
             }
-            System.Console.Clear();
-            Console.WriteLine(scripture.GetRenderedText());
-            Menu.PrintMenu();
             response = Menu.GetResponse();
             scripture.HideWords();
         }
-
     }
 }

@@ -37,6 +37,8 @@ public class Word
         if (_isHidden)
         {
             string placeHolder = "";
+            //string placeHolder2 = new string('_', _word.Length);
+
             // hide letters with _
             int count =  _word.Length;
             for (int i = 0; i < count; i++)

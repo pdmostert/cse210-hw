@@ -32,19 +32,51 @@ public class ReflectingActivity : PromptActivity
         _questions = questions;
     }
 
-    public void DisplayPrompt()
+    public void ShowReflectingActivity()
     {
+        DisplayStartMessage();
         //prompt
-        Console.WriteLine(GetRandomPromt());
+        Console.WriteLine("Consider the following prompt: ");
+        
+        var color = Console.ForegroundColor; //save current forground color
+        Console.ForegroundColor = ConsoleColor.Green; //set new color
+        Console.WriteLine($"--- {GetRandomPromt()} ---");
+        Console.ForegroundColor = color; // return to original color
+
+        Console.WriteLine();
+        Console.WriteLine("When you have something in mind, press enter to continue. ");
+        Console.ReadLine();
         //pause
+        DisplayQuestions();
+
         //loop question and pause for duration
 
-
+        DisplayEndMessage();
     }
-    public void DisplayQuestions()
+    private void DisplayQuestions()
     {
+        Console.WriteLine("Now ponder on each of the following questions as they related to this experiance.");
+        Console.Write("You may begin in: ");
+        ShowCountdown(3);
+        Console.WriteLine();
 
+        DateTime EndTime = DateTime.Now.AddSeconds(ActivityDuration); //Set end time
+        while (DateTime.Now < EndTime)
+        {
+            Console.WriteLine();
+            Console.Write($"> {GetRandomQuestion()} ");
+            ShowSpinner(7);
+        }
+        Console.WriteLine();
     }
+
+    private string GetRandomQuestion()
+    {
+        Random rnd = new Random();
+        int index = rnd.Next(_questions.Count);
+        return _questions[index];
+    }
+
     private List<string> GeneratePromptList()
     {
         List<string> prompts = new();

@@ -11,8 +11,13 @@ public class BreathingActivity : Activity
 
 
 
+
+/// <summary>
+/// The function displays a breathing exercise with a countdown timer for a specified duration.
+/// </summary>
     public void ShowBreathing()
     {
+        base.DisplayStartMessage();
         DateTime EndTime = DateTime.Now.AddSeconds(ActivityDuration); //Set end time
         while (DateTime.Now < EndTime)
         {
@@ -24,5 +29,6 @@ public class BreathingActivity : Activity
             base.ShowCountdown(6);
             Console.WriteLine();
         }
+        base.DisplayEndMessage();
     }
 }

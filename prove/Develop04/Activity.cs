@@ -23,7 +23,7 @@ public class Activity
         private set {; }
     }
 
-    public void DisplayStartMessage()
+    protected void DisplayStartMessage()
     {
         Console.Clear();
         Console.WriteLine($"Welcome to the {_activityName} Activity.");
@@ -34,22 +34,22 @@ public class Activity
         _activityDuration = int.Parse(Console.ReadLine());
         Console.Clear();
         System.Console.WriteLine("Get ready...");
-        ShowSpinner();
+        ShowSpinner(5);
         Console.WriteLine();
     }
 
-    public void DisplayEndMessage()
+    protected void DisplayEndMessage()
     {
         Console.WriteLine();
         Console.WriteLine("Well done!!");
         System.Console.WriteLine();
         System.Console.WriteLine($"You have completed another {_activityDuration} seconds of {_activityName} Activity.");
-        ShowSpinner();
+        ShowSpinner(5);
     }
 
-    private void ShowSpinner()
+    protected void ShowSpinner(int seconds)
     {
-
+        int spinnerDuration = seconds*10;
         List<string> symbols = new();
         symbols.Add("|");
         symbols.Add("/");
@@ -61,7 +61,7 @@ public class Activity
         symbols.Add("\\");
 
         int index = 0;
-        for (int i = 0; i < 50; i++)
+        for (int i = 0; i < spinnerDuration; i++)
         {
             Console.Write(symbols[index]);
             Thread.Sleep(100);

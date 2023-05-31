@@ -1,8 +1,7 @@
 using System;
 public class PromptActivity : Activity
 {
-    private List<string> _prompts;
-
+   
     private List<string> _prompts;
     public List<string> Prompts
     {
@@ -14,7 +13,7 @@ public class PromptActivity : Activity
     protected string GetRandomPromt()
     {
         Random rnd = new Random();
-        int index = rnd.Next(_prompts.count);
+        int index = rnd.Next(_prompts.Count);
         return _prompts[index];
     }
 

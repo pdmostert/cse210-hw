@@ -8,7 +8,6 @@ public class PromptActivity : Activity
         get { return _prompts; }
         set { _prompts = value; }
     }
-    
 
     protected string GetRandomPromt()
     {
@@ -16,6 +15,4 @@ public class PromptActivity : Activity
         int index = rnd.Next(_prompts.Count);
         return _prompts[index];
     }
-
-
 }

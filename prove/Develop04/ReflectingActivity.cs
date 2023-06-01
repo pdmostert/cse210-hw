@@ -31,7 +31,6 @@ public class ReflectingActivity : PromptActivity
         Prompts = prompts;
         _questions = questions;
     }
-
     public void ShowReflectingActivity()
     {
         DisplayStartMessage();
@@ -69,14 +68,12 @@ public class ReflectingActivity : PromptActivity
         }
         Console.WriteLine();
     }
-
     private string GetRandomQuestion()
     {
         Random rnd = new Random();
         int index = rnd.Next(_questions.Count);
         return _questions[index];
     }
-
     private List<string> GeneratePromptList()
     {
         List<string> prompts = new();

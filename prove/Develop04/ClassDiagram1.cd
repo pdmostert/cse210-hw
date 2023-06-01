@@ -1,46 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ClassDiagram MajorVersion="1" MinorVersion="1">
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="The Activity class is the base or parent class, Breathing Activity and Prompt Activity inherits for this class and olny have their own methods and attributes that are unique to them. The listing and reflection activity  both &quot;is a&quot; prompt activity and so they inherit from this class that intern inherits form Activity. The Program class calls and manages the menu and flow of the applciation ">
+    <Position X="0.555" Y="0.747" Height="2.562" Width="5.866" />
+  </Comment>
   <Class Name="Activity">
-    <Position X="9.25" Y="0.5" Width="2.5" />
+    <Position X="10.25" Y="0.5" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAIAAAAEAAAAAACAAAhQAAAAAACAAAABASAAA=</HashCode>
       <FileName>Activity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PromptActivity">
-    <Position X="7" Y="4.5" Width="2.75" />
+    <Position X="3.5" Y="5.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgQAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAQAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>PromptActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BreathingActivity">
-    <Position X="11.5" Y="4.5" Width="2" />
+    <Position X="11.25" Y="5.75" Width="3.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BreathingActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ListingActivity">
-    <Position X="4.75" Y="7.25" Width="2.5" />
+    <Position X="3.5" Y="9.5" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAEAAAAAAAAAEAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAAAAAAAAAACAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ListingActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ReflectingActivity">
-    <Position X="9.5" Y="7.25" Width="3" />
+    <Position X="11.5" Y="9.25" Width="4.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAACAAAAAAAAAAAABABAAA=</HashCode>
+      <HashCode>AAAAAAACAAAAAAAABAAAAAAACAAAAAAAAAAAABABAAA=</HashCode>
       <FileName>ReflectingActivity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Program">
-    <Position X="6.25" Y="0.75" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Font Name="Segoe UI" Size="9" />
+  <Class Name="Menu">
+    <Position X="6.75" Y="2.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAABAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="12" />
 </ClassDiagram>

@@ -10,8 +10,6 @@ public class BreathingActivity : Activity
     }
 
 
-
-
 /// <summary>
 /// The function displays a breathing exercise with a countdown timer for a specified duration.
 /// </summary>

@@ -19,7 +19,7 @@ public class ListingActivity : PromptActivity
 
         var color = Console.ForegroundColor; //save current forground color
         Console.ForegroundColor = ConsoleColor.Green; //set new color
-        Console.WriteLine($"--- {GetRandomPromt()} ---");
+        Console.WriteLine($"--- {GetRandomPrompt()} ---");
         Console.ForegroundColor = color; // return to original color
 
         Console.Write("You may begin in: ");

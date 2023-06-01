@@ -9,7 +9,12 @@ public class PromptActivity : Activity
         set { _prompts = value; }
     }
 
-    protected string GetRandomPromt()
+    public PromptActivity()
+    {
+            _prompts = new();
+    }
+
+    protected string GetRandomPrompt()
     {
         Random rnd = new Random();
         int index = rnd.Next(_prompts.Count);

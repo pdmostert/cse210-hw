@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-public class ReflectingActivity : PromptActivity
+public sealed class ReflectingActivity : PromptActivity
 {
     private List<string> _questions;
     public ReflectingActivity()
@@ -31,7 +31,8 @@ public class ReflectingActivity : PromptActivity
         Prompts = prompts;
         _questions = questions;
     }
-    public void ShowReflectingActivity()
+
+    public void StartReflectingActivity()
     {
         DisplayStartMessage();
         //prompt

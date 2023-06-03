@@ -1,8 +1,6 @@
 using System;
-public class BreathingActivity : Activity
+public sealed class BreathingActivity : Activity
 {
-
-
     public BreathingActivity()
     {
         base.ActivityName = "Breathing";
@@ -13,7 +11,7 @@ public class BreathingActivity : Activity
 /// <summary>
 /// The function displays a breathing exercise with a countdown timer for a specified duration.
 /// </summary>
-    public void ShowBreathing()
+    public void StartBreathing()
     {
         base.DisplayStartMessage();
         DateTime EndTime = DateTime.Now.AddSeconds(ActivityDuration); //Set end time

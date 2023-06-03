@@ -1,6 +1,6 @@
 using System;
 using System.Collections.Generic;
-public class ListingActivity : PromptActivity
+public sealed class ListingActivity : PromptActivity
 {
     private List<string> _responses;
     public ListingActivity()
@@ -11,7 +11,7 @@ public class ListingActivity : PromptActivity
         _responses = new();
     }
 
-    public void ShowListingActivity()
+    public void StartListingActivity()
     {
         base.DisplayStartMessage();
 

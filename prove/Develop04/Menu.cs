@@ -10,6 +10,7 @@ public static class Menu
         Console.WriteLine("2. Start reflecting activity");
         Console.WriteLine("3. Start listing activity");
         Console.WriteLine("4. Quit");
+        Console.WriteLine("5. Display Activity Log");
         Console.Write("Select a choice from the menu: ");
 
     }

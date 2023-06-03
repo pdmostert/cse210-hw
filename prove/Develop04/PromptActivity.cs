@@ -1,18 +1,18 @@
 using System;
 public class PromptActivity : Activity
 {
+    public PromptActivity()
+    {
+            _prompts = new();
+    }
    
     private List<string> _prompts;
-    public List<string> Prompts
+    protected List<string> Prompts
     {
         get { return _prompts; }
         set { _prompts = value; }
     }
 
-    public PromptActivity()
-    {
-            _prompts = new();
-    }
 
     protected string GetRandomPrompt()
     {

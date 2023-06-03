@@ -5,19 +5,18 @@ public class Activity
     private string _activityDescription;
     private int _activityDuration;
 
-
-    public string ActivityName
+    protected string ActivityName
     {
         get { return _activityName; }
         set { _activityName = value; }
 
     }
-    public string ActivityDescription
+    protected string ActivityDescription
     {
         get { return _activityDescription; }
         set { _activityDescription = value; }
     }
-    public int ActivityDuration
+    protected int ActivityDuration
     {
         get { return _activityDuration; }
         private set {; }
@@ -45,6 +44,7 @@ public class Activity
         System.Console.WriteLine();
         System.Console.WriteLine($"You have completed another {_activityDuration} seconds of {_activityName} Activity.");
         ShowSpinner(5);
+        SaveActivityToFile();
     }
 
     protected void ShowSpinner(int seconds)
@@ -84,8 +84,10 @@ public class Activity
         }
     }
 
-    public void SaveActivityToFile()
+    protected void SaveActivityToFile()
     {
+        ActivityLog activityLog = new($"Activity: {_activityName}, Duration: {_activityDuration}");
+        DataAccess.SaveFile(activityLog);
 
     }
 

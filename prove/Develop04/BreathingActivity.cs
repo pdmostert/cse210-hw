@@ -7,7 +7,6 @@ public sealed class BreathingActivity : Activity
         base.ActivityDescription = "This activity will help you relax by walking your through breathing in and out slowly. Clear your mind and focus on your breathing.";
     }
 
-
 /// <summary>
 /// The function displays a breathing exercise with a countdown timer for a specified duration.
 /// </summary>

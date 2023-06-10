@@ -1,5 +1,5 @@
 {
-  "Points": 100,
+  "Points": 1100,
   "Goals": [
     {
       "$type": "SimpleGoal",
@@ -9,7 +9,7 @@
     },
     {
       "$type": "EternalGoal",
-      "CompleteCount": 0,
+      "CompleteCount": 3,
       "Name": "eternal",
       "Description": "eternal",
       "BasePoints": 50
@@ -18,7 +18,7 @@
       "$type": "CheckListGoal",
       "BonusPoints": 500,
       "RepeatCount": 5,
-      "CompletedCount": 0,
+      "CompletedCount": 5,
       "Name": "checklist",
       "Description": "checklist",
       "BasePoints": 50

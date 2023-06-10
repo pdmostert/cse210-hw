@@ -2,6 +2,8 @@ public class EternalGoal : Goal
 {
     private int _completeCount;
 
+    public int CompleteCount { get => _completeCount; }
+
     public EternalGoal(string name, string description, int basePoints, int completeCount)
     {
         _name = name;
@@ -12,16 +14,17 @@ public class EternalGoal : Goal
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        return false;
     }
 
     public override int RecordEvent()
     {
-        throw new NotImplementedException();
+        _completeCount++;
+        return _basePoints;
     }
 
-    public override string ShowGoalProgress()
+    public override string DisplayGoal()
     {
-        throw new NotImplementedException();
+        return $"[ ] {_name} ({_description}) - Completed {_completeCount} times.";
     }
 }

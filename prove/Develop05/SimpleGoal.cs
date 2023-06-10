@@ -1,7 +1,8 @@
 
 public class SimpleGoal : Goal
 {
-    public SimpleGoal(string name, string description, int basePoints) 
+    private bool _isComplete;
+    public SimpleGoal(string name, string description, int basePoints)
     {
         _name = name;
         _description = description;
@@ -10,17 +11,22 @@ public class SimpleGoal : Goal
 
     public override int RecordEvent()
     {
-        return 1;
+        _isComplete = true;
+        return _basePoints;
     }
     public override bool IsComplete()
     {
-        return false;
+        return _isComplete;
     }
-    public override string ShowGoalProgress()
+    public override string DisplayGoal()
     {
-        return "[x]";
+        if (_isComplete)
+        {
+            return $"[X] {_name} ({_description})";
+        }
+        else
+        {
+            return $"[ ] {_name} ({_description})";
+        }
     }
-
-
-
 }

@@ -1,48 +1,64 @@
-public class ChekListGoal : Goal
+public class CheckListGoal : Goal
 {
     private int _bonusPoints;
     private int _repeatCount;
-    private int _completeCount;
+    private int _completedCount;
 
-    public ChekListGoal(string name, string description, int basePoints, int bonusPoints, int repeatCount, int completeCount)
+    public int BonusPoints { get => _bonusPoints; }
+    public int RepeatCount { get => _repeatCount; }
+    public int CompletedCount { get => _completedCount; }
+
+
+    public CheckListGoal(string name, string description, int basePoints, int bonusPoints, int repeatCount, int completedCount)
     {
         _name = name;
         _description = description;
         _basePoints = basePoints;
         _bonusPoints = bonusPoints;
         _repeatCount = repeatCount;
-        _completeCount = completeCount;
+        _completedCount = completedCount;
     }
 
 
 
-    public override bool Equals(object obj)
-    {
-        return base.Equals(obj);
-    }
-
-    public override int GetHashCode()
-    {
-        return base.GetHashCode();
-    }
 
     public override bool IsComplete()
     {
-        throw new NotImplementedException();
+        if (_completedCount >= _repeatCount)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     public override int RecordEvent()
     {
-        throw new NotImplementedException();
+        _completedCount++;
+        if (IsComplete())
+        {
+            return _basePoints + _bonusPoints;
+        }
+        else
+        {
+            return _basePoints;
+        }
+
     }
 
-    public override string ShowGoalProgress()
+    public override string DisplayGoal()
     {
-        throw new NotImplementedException();
+        if (IsComplete())
+        {
+            return $"[X] {_name} ({_description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
+        }
+        else
+        {
+             return $"[ ] {_name} ({_description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
+        }
     }
 
-    public override string ToString()
-    {
-        return base.ToString();
-    }
+
 }

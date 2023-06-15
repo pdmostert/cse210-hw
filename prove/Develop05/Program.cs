@@ -79,12 +79,12 @@ class Program
                     string saveFileName = Console.ReadLine();
                     if (saveFileName == "")
                     {
-                        DataAccess.SaveGoal(gameFile);
+                        DataAccess.SaveGameFile(gameFile);
 
                     }
                     else
                     {
-                        DataAccess.SaveGoal(gameFile, saveFileName);
+                        DataAccess.SaveGameFile(gameFile, saveFileName);
                     }
                     break;
                 case 4:
@@ -93,11 +93,11 @@ class Program
                     string loadFileName = Console.ReadLine();
                     if (loadFileName == "")
                     {
-                        gameFile = DataAccess.LoadGoal();
+                        gameFile = DataAccess.LoadGameFile();
                     }
                     else
                     {
-                        gameFile = DataAccess.LoadGoal(loadFileName);
+                        gameFile = DataAccess.LoadGameFile(loadFileName);
                     }
                     break;
                 case 5:

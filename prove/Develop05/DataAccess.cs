@@ -6,7 +6,7 @@ using System.Text.Json;
 
 public static class DataAccess
 {
-    public static void SaveGoal(GameFile gameFile, string filename="goals.json")
+    public static void SaveGameFile(GameFile gameFile, string filename="goals.json")
     {
         JsonSerializerOptions options = new JsonSerializerOptions
         {
@@ -18,7 +18,7 @@ public static class DataAccess
         File.WriteAllText(filename, json);
     }
 
-    public static GameFile LoadGoal(string filename = "goals.json")
+    public static GameFile LoadGameFile(string filename = "goals.json")
     {
         string json =   File.ReadAllText(filename);
 

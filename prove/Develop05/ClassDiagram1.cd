@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Comment CommentText="My Project has the displayed classes with Goal as the abstract class and EternalGoal, CheckListGoal and SimpleGoal as derived classes.&#xD;&#xA;Metthod's DisplayGoal, IsComplete and RecordEvent are abstract and have overide methods in each derived class. Program, Menu, GameFile and DataAccess are responsible for the flow of the applciation and saving all the data to a json text file.">
+    <Position X="0.54" Y="0.573" Height="5.897" Width="4.808" />
+  </Comment>
+  <Class Name="DataAccess">
+    <Position X="5.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataAccess.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EternalGoal">
+    <Position X="12.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAQAAAAAAEAAAAAAAAAAAAAIAAAAAI=</HashCode>
+      <FileName>EternalGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameFile">
+    <Position X="9.25" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAIAAgAAAgAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>GameFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Goal">
+    <Position X="13.5" Y="0.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAIAAAAAQgBAAEAAAAAAUAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>Goal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Menu">
+    <Position X="5.5" Y="3.75" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAIAABAABAAA=</HashCode>
+      <FileName>Menu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CheckListGoal">
+    <Position X="9.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AwEAAAACAAAAAAQAAAAAAAEAAAAAAAAAAAAAIAAAAAY=</HashCode>
+      <FileName>CheckListGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleGoal">
+    <Position X="15.25" Y="5.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAGAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <FileName>SimpleGoal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Program">
+    <Position X="5.5" Y="2.25" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="12" />
+</ClassDiagram>

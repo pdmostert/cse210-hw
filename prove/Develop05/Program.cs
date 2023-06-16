@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 
-
+// For extra credid, I used Json to store my data. I also included a refactored menu class and making use of a gameFile class to store the points and all goals.
+// I added a new derived class for BadHabbitGoal and it works in a negative manner. 
+// I am also made it so that you can display the amount of points that you have  collected from eternal and bad goals. 
 
 
 

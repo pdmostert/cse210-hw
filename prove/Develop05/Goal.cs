@@ -1,6 +1,6 @@
 using System.Text.Json.Serialization;
 
-//https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism?pivots=dotnet-7-0
+// https://learn.microsoft.com/en-us/dotnet/standard/serialization/system-text-json/polymorphism?pivots=dotnet-7-0
 // This article teaches how to action polymorphic Json serialization and deserialization.
 
 [JsonDerivedType(typeof(SimpleGoal), typeDiscriminator: "SimpleGoal")]

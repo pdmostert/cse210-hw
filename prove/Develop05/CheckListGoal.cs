@@ -9,11 +9,11 @@ public class CheckListGoal : Goal
     public int CompletedCount { get => _completedCount; }
 
 
-    public CheckListGoal(string name, string description, int basePoints, int bonusPoints, int repeatCount, int completedCount)
+    public CheckListGoal(string name, string description, int basePoints, int bonusPoints, int repeatCount, int completedCount) : base(name, description, basePoints)
     {
-        _name = name;
-        _description = description;
-        _basePoints = basePoints;
+        // _name = name;
+        // _description = description;
+        // _basePoints = basePoints;
         _bonusPoints = bonusPoints;
         _repeatCount = repeatCount;
         _completedCount = completedCount;
@@ -39,11 +39,11 @@ public class CheckListGoal : Goal
         _completedCount++;
         if (IsComplete())
         {
-            return _basePoints + _bonusPoints;
+            return BasePoints + _bonusPoints;
         }
         else
         {
-            return _basePoints;
+            return BasePoints;
         }
 
     }
@@ -52,11 +52,11 @@ public class CheckListGoal : Goal
     {
         if (IsComplete())
         {
-            return $"[X] {_name} ({_description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
+            return $"[X] {Name} ({Description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
         }
         else
         {
-             return $"[ ] {_name} ({_description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
+            return $"[ ] {Name} ({Description}) -- Currently completed: {_completedCount}/ {_repeatCount} times.";
         }
     }
 

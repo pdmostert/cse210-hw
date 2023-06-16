@@ -1,13 +1,14 @@
-public static class Menu{
+public static class Menu
+{
 
 
-    public static void ShowMenu(List<string> menuOptions,string menuHeading = "Menu Options: ",string menuFooter = "Please select a menu option: "  )
+    public static void ShowMenu(List<string> menuOptions, string menuHeading = "Menu Options: ", string menuFooter = "Please select a menu option: ")
     {
-       //Console.Clear();
+        //Console.Clear();
         Console.WriteLine(menuHeading);
         foreach (var item in menuOptions)
         {
-            Console.WriteLine($"  {menuOptions.IndexOf(item)+1}. {item}");
+            Console.WriteLine($"  {menuOptions.IndexOf(item) + 1}. {item}");
         }
         Console.Write(menuFooter);
 
@@ -30,7 +31,8 @@ public static class Menu{
         return choice;
     }
 
-    public static List<string> GetBaseMenu(){
+    public static List<string> GetBaseMenu()
+    {
         List<string> menuOptions = new List<string>();
         menuOptions.Add("Add Goal");
         menuOptions.Add("List Goals");
@@ -41,11 +43,13 @@ public static class Menu{
         return menuOptions;
     }
 
-    public static List<string> GetGoalMenu(){
+    public static List<string> GetGoalMenu()
+    {
         List<string> menuOptions = new List<string>();
         menuOptions.Add("Simple Goal");
         menuOptions.Add("Eternal Goal");
         menuOptions.Add("Check List Goal");
+        menuOptions.Add("Bad Habbit Goal");
         return menuOptions;
     }
 }

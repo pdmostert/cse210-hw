@@ -1,6 +1,10 @@
 using System;
 using System.Collections.Generic;
 
+
+
+
+
 class Program
 {
     static void Main(string[] args)
@@ -36,18 +40,19 @@ class Program
                     Console.Write("What is a short description of your goal? ");
                     string description = Console.ReadLine();
                     Console.Write("What is the amount of points of your goal? ");
-                    string basePoints = Console.ReadLine();
+                    string basePointsString = Console.ReadLine();
+                    int basePoints = int.Parse(basePointsString);
 
                     switch (goalChoice)
                     {
                         case 1:
                             //Simple Goal
-                            SimpleGoal simpleGoal = new SimpleGoal(name, description, int.Parse(basePoints));
+                            SimpleGoal simpleGoal = new SimpleGoal(name, description, basePoints);
                             gameFile.AddGoal(simpleGoal);
                             break;
                         case 2:
                             //Eternal Goal
-                            EternalGoal eternalGoal = new EternalGoal(name, description, int.Parse(basePoints), 0);
+                            EternalGoal eternalGoal = new EternalGoal(name, description, basePoints, 0);
                             gameFile.AddGoal(eternalGoal);
                             break;
                         case 3:
@@ -56,8 +61,17 @@ class Program
                             string completeCount = Console.ReadLine();
                             Console.Write("What is the bonus amount of points for this goal? ");
                             string bonusPoints = Console.ReadLine();
-                            CheckListGoal checkListGoal = new CheckListGoal(name, description, int.Parse(basePoints), int.Parse(bonusPoints), int.Parse(completeCount), 0);
+                            CheckListGoal checkListGoal = new CheckListGoal(name, description, basePoints, int.Parse(bonusPoints), int.Parse(completeCount), 0);
                             gameFile.AddGoal(checkListGoal);
+                            break;
+                        case 4:
+                            //Bad Habbit Goal
+                            if(basePoints >=0){
+                                
+                                basePoints = basePoints * (-1);
+                            }
+                            BadHabbitGoal badHabbitGoal = new(name, description, basePoints);
+                            gameFile.AddGoal(badHabbitGoal);
                             break;
                         default:
                             break;
@@ -68,9 +82,10 @@ class Program
                     Console.WriteLine("The goals are:");
                     foreach (var item in gameFile.Goals)
                     {
-                        Console.WriteLine($"{gameFile.Goals.IndexOf(item)}. {item.DisplayGoal()}");
+                        Console.WriteLine($"{gameFile.Goals.IndexOf(item) + 1}. {item.DisplayGoal()}");
                     }
-                    Console.WriteLine("Press any key to continue...");
+                    Console.WriteLine();
+                    Console.Write("Press any key to continue...");
                     Console.ReadKey();
                     break;
                 case 3:
@@ -102,6 +117,15 @@ class Program
                     break;
                 case 5:
                     //Record Event
+                    if (gameFile.Goals.Any() == false)
+                    {
+                        Console.WriteLine("You have no goals loaded yet. Please add a goal first. ");
+                        Console.WriteLine();
+                        Console.Write("Press any key to continue...");
+                        Console.ReadKey();
+                        break;
+                    }
+
                     Console.WriteLine("Record Event");
 
                     List<string> recordEventMenuOptions = new List<string>();
@@ -114,12 +138,14 @@ class Program
                     var reward = gameFile.Goals[recordEventChoice - 1].RecordEvent();
                     gameFile.Points += reward;
                     Console.WriteLine($"You have earned {reward} points");
-                    Console.WriteLine("Press any key to continue");
+                    Console.WriteLine();
+                    Console.Write("Press any key to continue");
                     Console.ReadKey();
 
                     break;
                 case 6:
                     //Quit
+                    Console.WriteLine();
                     Console.WriteLine("Good Bye");
                     break;
                 default:

@@ -1,27 +1,41 @@
 {
-  "Points": 1100,
+  "Points": 95,
   "Goals": [
     {
       "$type": "SimpleGoal",
-      "Name": "simple",
-      "Description": "simple",
+      "Name": "Give a talk",
+      "Description": "Seapk in Sacrament meeting when asked",
       "BasePoints": 100
     },
     {
       "$type": "EternalGoal",
-      "CompleteCount": 3,
-      "Name": "eternal",
-      "Description": "eternal",
+      "CompleteCount": 1,
+      "Name": "Study the scriptures daily",
+      "Description": "Study the scriptures daily for 10min",
       "BasePoints": 50
     },
     {
       "$type": "CheckListGoal",
       "BonusPoints": 500,
-      "RepeatCount": 5,
-      "CompletedCount": 5,
-      "Name": "checklist",
-      "Description": "checklist",
-      "BasePoints": 50
+      "RepeatCount": 3,
+      "CompletedCount": 0,
+      "Name": "Attend the Temple",
+      "Description": "Perform temple ordinances",
+      "BasePoints": 100
+    },
+    {
+      "$type": "EternalGoal",
+      "CompleteCount": 1,
+      "Name": "Pray daily",
+      "Description": "Remeber to do my morning prayer",
+      "BasePoints": 25
+    },
+    {
+      "$type": "BadHabbitGoal",
+      "CompleteCount": 1,
+      "Name": "Bad Words",
+      "Description": "Record every day I used bad words",
+      "BasePoints": -5
     }
   ]
 }

@@ -2,17 +2,17 @@
 public class SimpleGoal : Goal
 {
     private bool _isComplete;
-    public SimpleGoal(string name, string description, int basePoints)
+    public SimpleGoal(string name, string description, int basePoints):base(name, description,basePoints)
     {
-        _name = name;
-        _description = description;
-        _basePoints = basePoints;
+        // _name = name;
+        // _description = description;
+        // _basePoints = basePoints;
     }
 
     public override int RecordEvent()
     {
         _isComplete = true;
-        return _basePoints;
+        return BasePoints;
     }
     public override bool IsComplete()
     {
@@ -22,11 +22,11 @@ public class SimpleGoal : Goal
     {
         if (_isComplete)
         {
-            return $"[X] {_name} ({_description})";
+            return $"[X] {Name} ({Description})";
         }
         else
         {
-            return $"[ ] {_name} ({_description})";
+            return $"[ ] {Name} ({Description})";
         }
     }
 }

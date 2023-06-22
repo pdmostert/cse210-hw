@@ -2,12 +2,13 @@
 public class SimpleGoal : Goal
 {
     private bool _isComplete;
+
+    public bool Complete {get =>_isComplete; set => _isComplete = value;}
     public SimpleGoal(string name, string description, int basePoints):base(name, description,basePoints)
     {
-        // _name = name;
-        // _description = description;
-        // _basePoints = basePoints;
+
     }
+
 
     public override int RecordEvent()
     {

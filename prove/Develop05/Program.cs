@@ -68,8 +68,9 @@ class Program
                             break;
                         case 4:
                             //Bad Habbit Goal
-                            if(basePoints >=0){
-                                
+                            if (basePoints >= 0)
+                            {
+
                                 basePoints = basePoints * (-1);
                             }
                             BadHabbitGoal badHabbitGoal = new(name, description, basePoints);
@@ -89,6 +90,7 @@ class Program
                     Console.WriteLine();
                     Console.Write("Press any key to continue...");
                     Console.ReadKey();
+
                     break;
                 case 3:
                     //Save Goals
@@ -151,12 +153,8 @@ class Program
                     Console.WriteLine("Good Bye");
                     break;
                 default:
-
                     break;
             }
-
-
         }
     }
-
 }

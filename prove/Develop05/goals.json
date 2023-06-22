@@ -1,8 +1,9 @@
 {
-  "Points": 95,
+  "Points": 195,
   "Goals": [
     {
       "$type": "SimpleGoal",
+      "Complete": true,
       "Name": "Give a talk",
       "Description": "Seapk in Sacrament meeting when asked",
       "BasePoints": 100
@@ -32,7 +33,7 @@
     },
     {
       "$type": "BadHabbitGoal",
-      "CompleteCount": 1,
+      "CompleteCount": 0,
       "Name": "Bad Words",
       "Description": "Record every day I used bad words",
       "BasePoints": -5

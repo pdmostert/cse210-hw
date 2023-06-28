@@ -16,18 +16,28 @@ public class Order
     }
 
 
-    public double CalcualteOrderTotal()
+    public double CalculateOrderTotal()
     {
-        return 0;
+        double orderTotal = _products.Sum(x=>x.GetProductTotal());
+        if(_customer.IsUSA()){orderTotal +=5;}
+        else{orderTotal +=35;}
+        return orderTotal;
     }
 
     public string PackingLabel()
     {
-        return "";
+        string packingLabel = $"Packing Lable:\n";
+        foreach (var item in _products)
+        {
+            packingLabel += $" {item.DisplayProduct()}\n";
+        }
+
+        return packingLabel;
     }
     public string ShippingLabel()
     {
-        return "";
+        string shippingLabel = $"Shipping Label:\n{_customer.GetName()}\n{_customer.GetAddress()}";
+        return shippingLabel;
     }
 
     public void AddProduct(Product product)

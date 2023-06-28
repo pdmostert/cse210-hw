@@ -15,7 +15,8 @@ public class Address
 
     public string RenderAddress()
     {
-        return "";
+        string addressString = $" {_streetAddress}\n {_city}\n {_state}\n {_country}";
+        return addressString;
     }
 
     public bool IsUSA()

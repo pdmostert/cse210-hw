@@ -17,7 +17,7 @@ public class Product{
     }
 
     public string DisplayProduct(){
-        return "";
+        return $"{_name} ({_productId}) Qty: {_quantity}";
     }
 
 

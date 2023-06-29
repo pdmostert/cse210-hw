@@ -14,15 +14,19 @@ public abstract class Activity
     {
         return _duration;
     }
+    protected DateOnly GetDate()
+    {
+        return _date;
+    }
 
 
-    public abstract double GetDistance();
-    public abstract double GetSpeed();
-    public abstract double GetPace();
+    public abstract float GetDistance();
+    public abstract float GetSpeed();
+    public abstract float GetPace();
 
     public virtual string GetSummary()
     {
-        return "";
+        return $"{GetDate().ToString("dd MMM yyyy")} {this.GetType()} ({GetDuration()} min): Distance: {string.Format("{0:0.0}", GetDistance())} km, Speed: {string.Format("{0:0.0}", GetSpeed())} kph, Pace: {string.Format("{0:0.0}", GetPace())} min per km)";
     }
 
 }

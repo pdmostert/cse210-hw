@@ -3,30 +3,28 @@ public class Swimming : Activity
 
     private int _laps;
 
-    public Swimming(DateOnly date, int duration, int laps):base(date,duration)
+    public Swimming(DateOnly date, int duration, int laps) : base(date, duration)
     {
         _laps = laps;
     }
 
-    public override double GetPace()
+    public override float GetPace()
     {
-        throw new NotImplementedException();
+        return base.GetDuration() / GetDistance();
     }
 
-    public override double GetDistance()
+    public override float GetDistance()
     {
-        throw new NotImplementedException();
+        var distance = _laps * 50;
+        return (float)distance / 1000;
     }
 
-    public override double GetSpeed()
+    public override float GetSpeed()
     {
-        throw new NotImplementedException();
+        return (GetDistance() / GetDuration()) * 60;
     }
 
-    public override string GetSummary()
-    {
-        return base.GetSummary();
-    }
+
 
 
 }

@@ -15,16 +15,21 @@ public abstract class Event
         _address = address;
     }
 
+    protected string GetTitle()
+    {
+        return _title;
+    }
+    protected DateOnly GetDate()
+    {
+        return _date;
+    }
+
     public string GenerateStandardDescription()
     {
-        return "";
+        return $"Title: {_title}\nDescription: {_description}\nDate: {_date}\nTime: {_time}\nAddress:\n{_address.RenderAddress()}";
     }
 
-    public string GenerateShortDescription()
-    {
-        return "";
-    }
-
+    public abstract string GenerateShortDescription();
     public abstract string GenerateFullDescription();
 
 

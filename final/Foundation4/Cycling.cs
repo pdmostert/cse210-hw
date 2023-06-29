@@ -1,31 +1,25 @@
 public class Cycling : Activity
 {
-    private double _speed;
-    public Cycling(DateOnly date, int duration, double speed) : base(date, duration)
+    private float _speed;
+    public Cycling(DateOnly date, int duration, float speed) : base(date, duration)
     {
         _speed = speed;
     }
 
-    public override double GetDistance()
+    public override float GetDistance()
     {
-        throw new NotImplementedException();
+        return (GetSpeed() * GetDuration())/60;
     }
 
 
-    public override double GetPace()
+    public override float GetPace()
     {
-        throw new NotImplementedException();
+        return GetDuration()/GetDistance();
     }
 
-    public override double GetSpeed()
+    public override float GetSpeed()
     {
-        throw new NotImplementedException();
+        return _speed;
     }
-
-    public override string GetSummary()
-    {
-        return base.GetSummary();
-    }
-
 
 }

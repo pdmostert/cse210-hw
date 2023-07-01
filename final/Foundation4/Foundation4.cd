@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="This application has four classes, one base class Activity and 3 child classes Running, Swimming, and Cycling. The base class has all common value attributes and methods required. Each child class has its own implementation of GetDistance, GetSpeed and GetPace. With a bit of reflection, the GetSummary Class does not need to be overridden in each child class, but this class is still marked as virtual if the need arises.&#xD;&#xA;The program class is as always responsible for the creation of the objects and iterating trough each Activity's output.&#xD;&#xA;">
+    <Position X="8.017" Y="0.525" Height="2.308" Width="5.192" />
+  </Comment>
   <Class Name="Program">
     <Position X="0.5" Y="0.75" Width="2" />
     <TypeIdentifier>
@@ -10,28 +13,28 @@
   <Class Name="Activity">
     <Position X="4.75" Y="0.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAABgAAAAAAAABBCAAAAAAAEQAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABgAAEAAAAABBCAAAAAAAEQAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Activity.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Cycling">
     <Position X="8.75" Y="4" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAAEQAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAEQAAAABAAAAAAAAAA=</HashCode>
       <FileName>Cycling.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Running">
     <Position X="4.25" Y="4" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAAEQAAAAAAAAAAAAIAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAIAA=</HashCode>
       <FileName>Running.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Swimming">
     <Position X="0.5" Y="4" Width="3.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAAEQAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAABAAAAAAAAAAAAAAAAAAAEQAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Swimming.cs</FileName>
     </TypeIdentifier>
   </Class>

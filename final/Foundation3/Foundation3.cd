@@ -1,38 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="This application has four main classes, a base class of Event, which holds all the common attributes and methods, Full and Short descriptions are abstract methods as they require implementation in the inherited class. Each child class hold its unique values and method for its implementation. The Address class holds the address values and generates the address format.">
+    <Position X="11.625" Y="0.5" Height="2.883" Width="4.517" />
+  </Comment>
   <Class Name="Address">
-    <Position X="8.75" Y="0.5" Width="4.5" />
+    <Position X="0.5" Y="1.75" Width="4.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAEQACAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Address.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Event">
-    <Position X="2.75" Y="0.5" Width="5.5" />
+    <Position X="5.75" Y="0.5" Width="5.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAgAAAEBAAAAAAAAAASAAAAABAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAQIEgAAAEBAAAAAAAAAASAAAAABAAAEAAAAA=</HashCode>
       <FileName>Event.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="LecturEvent">
-    <Position X="8.75" Y="4.75" Width="7.25" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQgAAAAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>LecturEvent.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="OutdoorEvent">
-    <Position X="0.5" Y="7" Width="6.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAEA=</HashCode>
-      <FileName>OutdoorEvent.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="ReceptionEvent">
-    <Position X="0.5" Y="4.75" Width="7.25" />
-    <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
-      <FileName>ReceptionEvent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Program">
@@ -40,6 +22,27 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lecture">
+    <Position X="0.5" Y="4.25" Width="7" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQgAAAQAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Lecture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Outdoor">
+    <Position X="5.25" Y="6.75" Width="6.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAEA=</HashCode>
+      <FileName>Outdoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Reception">
+    <Position X="9" Y="4.25" Width="6.75" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Reception.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

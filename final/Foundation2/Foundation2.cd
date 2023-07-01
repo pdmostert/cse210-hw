@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="This application has four main classes, Order that has a Customer and List of Products class, a Customer class that has an Address class, each class also has its specific attributes and methods. Order is responcible to generate the Order Total, the Packing Label and Shipping Label. Customer and Address also cheks if the address is in USA or not.">
+    <Position X="7.658" Y="3.475" Height="2.667" Width="6.55" />
+  </Comment>
   <Class Name="Program">
     <Position X="0.5" Y="0.5" Width="2" />
     <TypeIdentifier>
@@ -10,14 +13,14 @@
   <Class Name="Order">
     <Position X="2.75" Y="0.5" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAACIAAAIAAAAIAAAAAAQAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <HashCode>BAACIAAAAAAAAIAAAAAAQAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
       <FileName>Order.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Customer">
     <Position X="6.5" Y="0.5" Width="3" />
     <TypeIdentifier>
-      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAA=</HashCode>
+      <HashCode>AAAAIAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAEBABAA=</HashCode>
       <FileName>Customer.cs</FileName>
     </TypeIdentifier>
   </Class>

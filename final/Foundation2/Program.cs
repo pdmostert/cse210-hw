@@ -27,11 +27,11 @@ class Program
 
         foreach (var item in orders)
         {
-        System.Console.WriteLine($"Order Total $ {String.Format("{0:0.00}", item.CalculateOrderTotal())}");
-        System.Console.WriteLine();
         System.Console.WriteLine(item.PackingLabel());
         System.Console.WriteLine();
         System.Console.WriteLine(item.ShippingLabel());
+        System.Console.WriteLine();
+        System.Console.WriteLine($"Order Total $ {String.Format("{0:0.00}", item.CalculateOrderTotal())}");
         System.Console.WriteLine();
         }
       

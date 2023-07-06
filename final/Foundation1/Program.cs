@@ -39,6 +39,8 @@ class Program
         foreach (var video in videos)
         {
             System.Console.WriteLine(video.DisplayVideoInfo());
+            System.Console.WriteLine($"Number of comments: {video.NumberOfComments()}");
+            
             foreach (var comment in video.GetListOfComments())
             {
                 System.Console.WriteLine(comment.DisplayComment());

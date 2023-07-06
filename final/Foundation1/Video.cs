@@ -27,7 +27,7 @@ public class Video
 
     public string DisplayVideoInfo()
     {
-        return $"Title: {_title} Author: {_author} Length: {_length} seconds";
+        return $"Title: {_title}\nAuthor: {_author}\nLength: {_length} seconds";
     }
 
 

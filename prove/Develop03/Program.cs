@@ -12,6 +12,8 @@ class Program
     {
         //Clear before we start
         System.Console.Clear();
+        Reference reference = new();
+        reference._book = "Alma";
 
         List<Scripture> scriptures = new();
         scriptures = DataAccess.LoadFile(); //Load scriptures from file

@@ -22,7 +22,4 @@ public class Running : Activity
         return (GetDistance() / GetDuration()) * 60;
     }
 
-
-
-
 }

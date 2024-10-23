@@ -24,7 +24,4 @@ public class Swimming : Activity
         return (GetDistance() / GetDuration()) * 60;
     }
 
-
-
-
 }
